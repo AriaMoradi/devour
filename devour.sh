@@ -1,6 +1,8 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 id=$(xdo id)
 xdo hide
-$("$@") > /dev/null 2>&1
+
+echo "$@" | bash -i
+
 xdo show "$id"
